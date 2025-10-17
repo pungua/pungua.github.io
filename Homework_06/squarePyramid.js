@@ -191,15 +191,17 @@ export class squarePyramid {
         // left face   (v0,v4,v1)
         // bottom face (v1,v2,v3,v4)
 
+        // 텍스쳐를 위 네 면에 골고루 분배 -> 0.0~1.0 x축을 4등분
+        //mapping 1
         this.texCoords = new Float32Array([
             // front face  (v0,v1,v2)
-            0.5, 1,   0, 0,   1, 0, 
+            1/8, 1,     0/8, 0,      2/8, 0, 
             // right face  (v0,v2,v3)
-            0.5, 1,   0, 0,   1, 0, 
+            3/8, 1,     2/8, 0,      4/8, 0, 
             // back face    (v0,v3,v4)
-            0.5, 1,   0, 0,   1, 0, 
+            5/8, 1,     4/8, 0,      6/8, 0, 
             // left face   (v0,v4,v1)
-            0.5, 1,   0, 0,   1, 0, 
+            7/8, 1,     6/8, 0,      8/8, 0, 
             // bottom face (v1,v2,v3,v4)
             0, 1,   1, 1,   1, 0,   0, 0,
         ]);
